@@ -446,7 +446,7 @@ GET /disease/mml/cystic-fibrosis
 </details>
 
 <details>
- <summary><code>GET</code> <code><b>/disease/{row_id}</b></code></summary>
+ <summary><code>GET</code> <code><b>/disease/{snp_row_id}</b></code></summary>
  <br />
 
 Retrieve diseases associated with the SNP from the SNP row ID from the MML database
@@ -492,7 +492,7 @@ GET /disease/5173842
 ### Phenotype
 
 <details>
- <summary><code>GET</code> <code><b>/pheno/apb/{mp}</b></code></summary>
+ <summary><code>GET</code> <code><b>/pheno/apb/{mp_id}</b></code></summary>
  <br />
 
 Retrieve APB alleles associated to the phenotype, with the mammalian phenotype (MP) ID
@@ -501,7 +501,7 @@ Retrieve APB alleles associated to the phenotype, with the mammalian phenotype (
 
 > | name      |  type     | data type               | description                                                           |
 > |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | `mp`     |  required | string   | High level mammalian phenotype ID |
+> | `mp_id`     |  required | string   | High level mammalian phenotype ID |
 
 ##### Responses
 
@@ -547,6 +547,51 @@ GET /pheno/apb/MP:0005391
   ...
 }
 ```
+</details>
+
+<br />
+
+### Protein Information
+
+<details>
+ <summary><code>GET</code> <code><b>/mml/protein/{snp_row_id}</b></code></summary>
+ <br />
+
+Retrieve protein information associated with a SNP from MML based on the SNP row ID.
+
+##### Parameters
+
+> | name      |  type     | data type               | description                                                           |
+> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
+> | `snp_row_id`     |  required | int   | ID for a SNP from the MML database |
+
+##### Responses
+
+> | http code     | content-type                      | response                                                            |
+> |---------------|-----------------------------------|---------------------------------------------------------------------|
+> | `200`         | `application/json`        | `Success`                                |
+<br />
+
+#### Example:
+##### Request
+
+```http
+GET /mml/protein/757000
+```
+
+#### Response
+
+```json
+{
+  0 {
+    "description": "ARM-type_fold"
+    "ensembl_id": "SSF48371"
+    "interpro_id": "IPR016024"
+  }
+  ...
+}
+```
+
 </details>
 
 <br />
