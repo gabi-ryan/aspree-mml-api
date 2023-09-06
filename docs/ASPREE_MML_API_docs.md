@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the documentation for the ASPREE & MML Biomedical Data Asset API! This document provides information on how to use the API's endpoints and features. The API is based on an integrated database from the data sources listed below. [Learn more about the database schema.](/Database_schema.md)
+Welcome to the documentation for the ASPREE & MML Biomedical Data Asset API! This document provides information on how to use the API's endpoints and features. The API is based on an integrated database from the data sources listed below. [Build the database schema.](/bin/README.md)
 
 ## Keywords and Data sources
 
